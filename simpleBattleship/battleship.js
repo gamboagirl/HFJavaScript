@@ -1,10 +1,11 @@
 // JavaScript Document
 // Headfirst JavaScript Ch2, page 50
 
-// location of battleship, hardcoded for now
-var location1 = 3;
-var location2 = 4;
-var location3 = 5;
+// location of battleship, start with random numbers 0-4 since guesses are 3 spots in positions 0-6
+// Math.floor(Math.random() * 5) equals random number (0.00 - 0.99) * 5, then takes the whole number
+var location1 = Math.floor(Math.random() * 5);
+var location2 = location1 + 1;
+var location3 = location2 + 1;
 
 var guess;	// player's guess
 var hits = 0; 	// count of correct guesses
